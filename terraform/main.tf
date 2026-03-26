@@ -11,7 +11,10 @@ provider "aws" {
 variable "aws_region"       { default = "us-east-1" }
 variable "project_name"     {}
 variable "image_tag"        { default = "latest" }
-variable "app_port"         { type = number; default = 8080 }
+variable "app_port" {
+  type    = number
+  default = 8080
+}
 variable "health_check_path" { default = "/actuator/health" }
 
 variable "spring_datasource_url"      { default = "" }
